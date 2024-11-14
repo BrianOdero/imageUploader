@@ -1,5 +1,18 @@
-import { Stack } from "expo-router";
+import { AuthProvider } from "@/provider/AuthProvider";
+import { Slot, Stack } from "expo-router";
 
 export default function RootLayout() {
-  return <Stack />;
+
+
+  const InitialLayout = () => {
+    return (
+      <></>
+    )
+  }
+
+  return (
+    <AuthProvider>
+      <InitialLayout/>
+    </AuthProvider>
+  )
 }
