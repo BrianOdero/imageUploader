@@ -17,11 +17,11 @@ export default function RootLayout() {
       if(!initialized) return;
 
       //declaring folder requiring authentication
-      const InAuthGroup = segments[0] === '(auth)';
+      const InAuthGroup = segments[0] === '(auth)' as any;
 
       if(session && !InAuthGroup){
         //redirect authenticated users to list
-        router.replace('list')
+        router.replace('list' as any)
       }
       else if(!session && InAuthGroup){
         //redirect unauthenticated users to login

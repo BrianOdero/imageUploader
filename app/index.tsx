@@ -98,7 +98,7 @@ const LoginRegisterScreens = () => {
           thumbColor={rememberMe ? "#1e3a8a" : "#f4f4f5"}
         />
       </View>
-      <TouchableOpacity style={styles.button} onPress={isLogin ? signIn : signIn}>
+      <TouchableOpacity style={styles.button} onPress={isLogin ? signIn : signUp}>
          <Text style={styles.buttonText}>{isLogin ? 'Sign In'  : 'Sign Up'}</Text>
     </TouchableOpacity>
       <TouchableOpacity onPress={toggleScreen} style={styles.toggleContainer}>
